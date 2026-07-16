@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>习惯打卡</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>✦ 习惯打卡</h1>
+    <div class="date" id="todayDisplay"></div>
+    <div class="quote" id="quoteDisplay"></div>
+  </div>
+
+  <div class="week-section">
+    <div class="week-header">
+      <span class="week-title">📊 本周打卡</span>
+      <span class="week-summary" id="weekSummary">完成 0/0 项</span>
+    </div>
+    <div class="week-bar-track">
+      <div class="week-bar-fill" id="weekBarFill" style="width: 0%"></div>
+    </div>
+  </div>
+
+  <div class="progress-section">
+    <div class="progress-ring">
+      <svg width="72" height="72" viewBox="0 0 72 72">
+        <circle class="bg-circle" cx="36" cy="36" r="30" />
+        <circle class="fg-circle" id="progressCircle" cx="36" cy="36" r="30"
+          stroke-dasharray="188.5" stroke-dashoffset="188.5" />
+      </svg>
+      <div class="progress-count" id="progressCount">0<small>/0</small></div>
+    </div>
+    <div class="progress-label" id="progressLabel">
+      今天完成了 <strong>0</strong> 项
+    </div>
+  </div>
+
+  <div class="habit-list" id="habitList"></div>
+
+  <div class="add-form">
+    <input type="text" id="habitInput" placeholder="添加新习惯…" maxlength="30" autocomplete="off" />
+    <button id="addBtn">添加</button>
+  </div>
+
+  <div class="footer">数据保存在本地浏览器</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
